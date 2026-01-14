@@ -38,7 +38,7 @@ function Stars(props: any) {
             <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} {...props}>
                 <PointMaterial
                     transparent
-                    color="#f59e0b"
+                    color="#3b82f6"
                     size={0.003}
                     sizeAttenuation={true}
                     depthWrite={false}
@@ -122,12 +122,12 @@ function Connections() {
             {Array.from({ length: count }).map((_, i) => (
                 <mesh key={i} position={[positions[i * 3], positions[i * 3 + 1], positions[i * 3 + 2]]}>
                     <sphereGeometry args={[0.015, 8, 8]} />
-                    <meshBasicMaterial color="#fbbf24" transparent opacity={0.8} />
+                    <meshBasicMaterial color="#60a5fa" transparent opacity={0.8} />
                 </mesh>
             ))}
             {/* Lines */}
             <lineSegments ref={lineRef} geometry={lineGeometry}>
-                <lineBasicMaterial color="#fbbf24" transparent opacity={0.15} linewidth={1} />
+                <lineBasicMaterial color="#60a5fa" transparent opacity={0.15} linewidth={1} />
             </lineSegments>
         </group>
     );

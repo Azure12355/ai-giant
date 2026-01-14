@@ -20,9 +20,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-brand-300 to-brand-600 rounded-lg flex items-center justify-center text-black font-bold text-xl shadow-[0_0_15px_rgba(245,158,11,0.4)]">
-              Z
-            </div>
+            <img src="/logo-white.png" alt="智巨人 Logo" className="w-10 h-10 object-contain" />
             <div className="hidden md:block">
               <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-brand-200 to-brand-500">
                 智巨人

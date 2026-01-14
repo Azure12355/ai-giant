@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
       <Hero3DBackground />
 
       {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-black/40 pointer-events-none z-0"></div>
+      <div className="absolute inset-0 bg-black/15 pointer-events-none z-0"></div>
 
       {/* Background Gradients (optional, can be kept for extra depth) */}
       <div className="absolute inset-0 pointer-events-none z-0">

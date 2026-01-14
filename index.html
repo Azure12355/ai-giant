@@ -14,17 +14,17 @@
         extend: {
           colors: {
             brand: {
-              50: '#fffbeb',
-              100: '#fef3c7',
-              200: '#fde68a', // Gold light
-              300: '#fcd34d',
-              400: '#fbbf24',
-              500: '#f59e0b', // Primary Gold
-              600: '#d97706',
-              700: '#b45309',
-              800: '#92400e',
-              900: '#78350f',
-              950: '#451a03',
+              50: '#eff6ff',   // blue-50
+              100: '#dbeafe',  // blue-100
+              200: '#bfdbfe',  // blue-200
+              300: '#93c5fd',  // blue-300
+              400: '#60a5fa',  // blue-400
+              500: '#3b82f6',  // Primary Blue
+              600: '#2563eb',  // blue-600
+              700: '#1d4ed8',  // blue-700
+              800: '#1e40af',  // blue-800
+              900: '#1e3a8a',  // blue-900
+              950: '#172554',  // blue-950
               dark: '#020617', // Slate 950/Black
             }
           },
@@ -63,13 +63,13 @@
     }
 
     ::-webkit-scrollbar-thumb {
-      background: #451a03;
+      background: #1e40af;
       border-radius: 4px;
-      border: 1px solid #78350f;
+      border: 1px solid #1e3a8a;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background: #92400e;
+      background: #3b82f6;
     }
 
     body {
@@ -85,29 +85,29 @@
     }
 
     .glass-gold {
-      background: rgba(245, 158, 11, 0.03);
+      background: rgba(59, 130, 246, 0.03);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(245, 158, 11, 0.15);
-      box-shadow: 0 0 40px rgba(245, 158, 11, 0.05) inset;
+      border: 1px solid rgba(59, 130, 246, 0.15);
+      box-shadow: 0 0 40px rgba(59, 130, 246, 0.05) inset;
     }
 
     .glass-card:hover {
-      background: rgba(245, 158, 11, 0.05);
-      border: 1px solid rgba(245, 158, 11, 0.3);
+      background: rgba(59, 130, 246, 0.05);
+      border: 1px solid rgba(59, 130, 246, 0.3);
       transform: translateY(-4px);
       transition: all 0.3s ease;
-      box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.15);
+      box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.15);
     }
 
     /* Cosmic Background Utils */
     .bg-stars {
       background-image:
-        radial-gradient(1.5px 1.5px at 20px 30px, #fbbf24, rgba(0, 0, 0, 0)),
+        radial-gradient(1.5px 1.5px at 20px 30px, #60a5fa, rgba(0, 0, 0, 0)),
         radial-gradient(1.5px 1.5px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
-        radial-gradient(1.5px 1.5px at 50px 160px, #d97706, rgba(0, 0, 0, 0)),
+        radial-gradient(1.5px 1.5px at 50px 160px, #2563eb, rgba(0, 0, 0, 0)),
         radial-gradient(1.5px 1.5px at 90px 40px, #fff, rgba(0, 0, 0, 0)),
-        radial-gradient(1.5px 1.5px at 130px 80px, #f59e0b, rgba(0, 0, 0, 0));
+        radial-gradient(1.5px 1.5px at 130px 80px, #3b82f6, rgba(0, 0, 0, 0));
       background-repeat: repeat;
       background-size: 200px 200px;
       animation: twinkle 5s infinite linear;
@@ -130,13 +130,13 @@
     }
 
     .text-gradient-gold {
-      background: linear-gradient(to right, #fef3c7, #f59e0b, #d97706);
+      background: linear-gradient(to right, #dbeafe, #3b82f6, #1d4ed8);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .border-gradient-gold {
-      border-image: linear-gradient(to right, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.5), rgba(245, 158, 11, 0.1)) 1;
+      border-image: linear-gradient(to right, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.5), rgba(59, 130, 246, 0.1)) 1;
     }
   </style>
 </head>
