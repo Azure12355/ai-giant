@@ -125,27 +125,6 @@ export const CORE_TEAM: TeamMember[] = [
     tags: ["技术负责人", "AI解决方案", "阿里云认证讲师"],
     avatarUrl: "/images/team/core-team/cjy.png"
   },
-  {
-    name: "王峰",
-    role: "AI培训顾问",
-    description: "专注于企业数字化与智能化转型的资深专家，拥有15年行业经验。中组部干部培训基地认证讲师，工信部领军人才项目讲师，阿里AI大模型指定讲师，原阿里CIO学院创始合伙人、执行院长。",
-    tags: ["15年行业经验", "阿里CIO学院", "工信部讲师"],
-    avatarUrl: "/images/team/core-team/wf.png"
-  },
-  {
-    name: "佘尚俊",
-    role: "AI技术顾问",
-    description: "阿里巴巴工作十五年高级架构师，擅长云平台搭建，阿里云·达摩院高级AI架构师，北京理工大学校外博士生导师，资深架构师，10年以上大型系统开发经验。",
-    tags: ["达摩院AI架构师", "15年阿里", "北理博士生导师"],
-    avatarUrl: "/images/team/core-team/ssj.png"
-  },
-  {
-    name: "牛聪聪",
-    role: "AI解决方案负责人",
-    description: "前案例自身运营专家，前纳爱斯集团副总经理，杭州人社局认知导师，操盘过亿级年GMV项目，擅长用户增长与商业化闭环设计。",
-    tags: ["解决方案负责人", "亿级GMV", "用户增长专家"],
-    avatarUrl: "/images/team/core-team/ncc.png"
-  }
 ];
 
 export const ADVISORS: TeamMember[] = [
@@ -299,4 +278,44 @@ export const PARTNERS_ROW_1 = [
 export const PARTNERS_ROW_2 = [
   "China Export", "PUBG", "58.com", "People.cn", "Parametrix.ai", "Didi", "WeDoctor",
   "Alibaba", "iFlytek", "DingTalk", "SenseTime", "ByteDance", "Baidu", "Microsoft"
+];
+
+// ==================== 合作伙伴 Logo 配置 ====================
+export const PARTNER_LOGOS = [
+  { name: "Partner 4", image: "/images/logos/图片4.png" },
+  { name: "Partner 6", image: "/images/logos/图片6.png" },
+  { name: "Partner 7", image: "/images/logos/图片7.png" },
+  { name: "Partner 8", image: "/images/logos/图片8.png" },
+  { name: "Partner 9", image: "/images/logos/图片9.png" },
+  { name: "Partner 10", image: "/images/logos/图片10.png" },
+  { name: "Partner 11", image: "/images/logos/图片11.png" },
+  { name: "Partner 12", image: "/images/logos/图片12.png" },
+  { name: "Partner 13", image: "/images/logos/图片13.png" },
+  { name: "Partner 14", image: "/images/logos/图片14.png" },
+  { name: "Partner 15", image: "/images/logos/图片15.png" },
+  { name: "Partner 16", image: "/images/logos/图片16.png" },
+  { name: "Partner 17", image: "/images/logos/图片17.png" },
+  { name: "Partner 18", image: "/images/logos/图片18.png" },
+  { name: "Partner 19", image: "/images/logos/图片19.png" },
+  { name: "Partner 20", image: "/images/logos/图片20.png" },
+  { name: "Partner 21", image: "/images/logos/图片21.png" },
+  { name: "Partner 22", image: "/images/logos/图片22.png" },
+  { name: "Partner 23", image: "/images/logos/图片23.png" },
+  { name: "Partner 24", image: "/images/logos/图片24.png" },
+  { name: "Partner 25", image: "/images/logos/图片25.png" },
+  { name: "Partner 26", image: "/images/logos/图片26.png" },
+  { name: "Partner 27", image: "/images/logos/图片27.png" },
+  { name: "Partner 28", image: "/images/logos/图片28.png" },
+  { name: "Partner 29", image: "/images/logos/图片29.png" },
+  { name: "Partner 31", image: "/images/logos/图片31.png" },
+  { name: "Partner 32", image: "/images/logos/图片32.png" },
+  { name: "Partner 33", image: "/images/logos/图片33.png" },
+  { name: "Partner 34", image: "/images/logos/图片34.png" },
+  { name: "Partner 35", image: "/images/logos/图片35.png" },
+  { name: "Partner 36", image: "/images/logos/图片36.png" },
+  { name: "Partner 37", image: "/images/logos/图片37.png" },
+  { name: "Partner 38", image: "/images/logos/图片38.png" },
+  { name: "Partner 39", image: "/images/logos/图片39.png" },
+  { name: "Partner 40", image: "/images/logos/图片40.png" },
+  { name: "Partner 41", image: "/images/logos/图片41.png" },
 ];

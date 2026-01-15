@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { NAV_ITEMS } from '../constants';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +32,7 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-center space-x-8">
               {NAV_ITEMS.map((item) => (
                 <a
                   key={item.label}
@@ -41,6 +42,7 @@ const Navbar: React.FC = () => {
                   {item.label}
                 </a>
               ))}
+              <ThemeToggle />
               <a href="#join" className="bg-gradient-to-r from-brand-500 to-brand-700 hover:from-brand-400 hover:to-brand-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-all hover:scale-105 border border-brand-400/20">
                 立即咨询
               </a>
@@ -73,6 +75,10 @@ const Navbar: React.FC = () => {
                 {item.label}
               </a>
             ))}
+            <div className="flex items-center px-3 py-2">
+              <span className="text-slate-300 text-sm font-medium mr-3">主题切换</span>
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       )}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Quote } from 'lucide-react';
-import { TESTIMONIALS, PARTNERS_ROW_1, PARTNERS_ROW_2 } from '../constants';
+import { TESTIMONIALS, PARTNER_LOGOS } from '../constants';
 
 const Ecosystem: React.FC = () => {
   // 定义动画变体
@@ -128,8 +128,8 @@ const Ecosystem: React.FC = () => {
           <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black to-transparent z-10"></div>
 
           <div className="flex flex-col gap-8 mb-16">
-            <MarqueeRow items={PARTNERS_ROW_1} direction="left" />
-            <MarqueeRow items={PARTNERS_ROW_2} direction="right" />
+            <MarqueeRow items={PARTNER_LOGOS} direction="left" />
+            <MarqueeRow items={PARTNER_LOGOS} direction="right" />
           </div>
 
           <motion.div
@@ -156,24 +156,36 @@ const Ecosystem: React.FC = () => {
   );
 };
 
-const MarqueeRow = ({ items, direction = "left" }: { items: string[], direction?: "left" | "right" }) => {
+const MarqueeRow = ({ items, direction = "left" }: { items: Array<{ name: string; image: string }>, direction?: "left" | "right" }) => {
   return (
-    <div className="flex overflow-hidden relative w-full">
+    <div className="flex overflow-hidden relative w-full py-8">
       <motion.div
-        className="flex gap-12 whitespace-nowrap px-12"
+        className="flex gap-8 px-8"
         animate={{ x: direction === 'left' ? "-50%" : "0%" }}
         initial={{ x: direction === 'left' ? "0%" : "-50%" }}
         transition={{
-          duration: 80,
+          duration: 60,
           repeat: Infinity,
           ease: "linear",
           repeatType: "loop"
         }}
       >
         {[...items, ...items, ...items].map((item, idx) => (
-          <div key={idx} className="flex items-center justify-center w-40 h-16 bg-white/5 rounded-lg border border-white/5 hover:border-brand-500/30 hover:bg-white/10 transition-colors cursor-pointer group">
-            <span className="text-slate-400 font-bold text-lg group-hover:text-brand-400 transition-colors">{item}</span>
-          </div>
+          <motion.div
+            key={idx}
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+            className="relative group shrink-0 cursor-pointer"
+            title={item.name}
+          >
+            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border-4 border-slate-200 flex items-center justify-center p-3 shadow-lg hover:shadow-xl hover:border-brand-400 transition-all">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </motion.div>
         ))}
       </motion.div>
     </div>
