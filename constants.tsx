@@ -1,12 +1,12 @@
-import { 
-  Zap, 
-  TrendingUp, 
-  ShieldCheck, 
-  Users, 
-  Globe, 
-  Cpu, 
-  Award, 
-  BookOpen, 
+import {
+  Zap,
+  TrendingUp,
+  ShieldCheck,
+  Users,
+  Globe,
+  Cpu,
+  Award,
+  BookOpen,
   Briefcase,
   Layers,
   Search,
@@ -88,13 +88,14 @@ export const ECOSYSTEM_ITEMS = [
   { title: 'AI解决方案', desc: '定制化开发，私有化部署，深度陪跑', icon: Briefcase },
 ];
 
+export const FOUNDER: TeamMember = {
+  name: "七天 (王琪)",
+  role: "创始人",
+  description: "前淘宝大学达人学院院长，薇娅、李佳琦启蒙导师。阿里十年经验，中国AI百强年会创业领袖。见证直播电商从0到1，单年营收破亿。",
+  tags: ["领路人", "阿里系", "电商专家", "AI创业领袖"]
+};
+
 export const CORE_TEAM: TeamMember[] = [
-  {
-    name: "七天 (王琪)",
-    role: "创始人",
-    description: "前淘宝大学达人学院院长，薇娅、李佳琦启蒙导师。阿里十年经验，中国AI百强年会创业领袖。",
-    tags: ["领路人", "阿里系", "电商专家"]
-  },
   {
     name: "徐小敏",
     role: "CMO",
@@ -102,18 +103,58 @@ export const CORE_TEAM: TeamMember[] = [
     tags: ["营销", "讲师"]
   },
   {
+    name: "孔洪海",
+    role: "CPQ",
+    description: "前抖音电商学习中心负责人，淘宝大学资深产品经理。",
+    tags: ["产品", "电商"]
+  },
+  {
+    name: "徐兴兰",
+    role: "COO",
+    description: "共有家园创始人，阿里本地生活高级运营专家。",
+    tags: ["运营", "阿里系"]
+  },
+  {
     name: "陈洁毅",
     role: "CTO",
     description: "前平安科技、阿里云、百度智能云技术专家。",
     tags: ["技术", "云架构"]
   },
-   {
+  {
+    name: "王峰",
+    role: "AI培训顾问",
+    description: "原阿里CIO学院执行院长，原阿里云研究院总监。",
+    tags: ["培训", "顾问"]
+  },
+  {
     name: "牛聪聪",
     role: "AI解决方案负责人",
     description: "前纳爱斯集团副总经理，深耕企业数字化转型。",
     tags: ["解决方案", "管理"]
+  },
+  {
+    name: "佘尚俊",
+    role: "AI技术顾问",
+    description: "阿里云·达摩院高级AI架构师。",
+    tags: ["技术顾问", "达摩院"]
   }
 ];
+
+export const ADVISORS: TeamMember[] = [
+  {
+    name: "林敏",
+    role: "战略股东",
+    description: "全域电商营销领军者，服务800万+达人。",
+    tags: ["电商营销"]
+  },
+  {
+    name: "吴晓波",
+    role: "战略股东",
+    description: "著名财经作家，蓝狮子出版机构创始人。",
+    tags: ["财经", "出版"]
+  }
+];
+
 
 export const BENEFITS: Benefit[] = [
   { title: 'ROI', value: '1:5', icon: TrendingUp },
