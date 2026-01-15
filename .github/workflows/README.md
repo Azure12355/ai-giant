@@ -53,7 +53,7 @@ The workflow builds the project but doesn't auto-deploy. Uncomment and configure
 
 1. Install Vercel CLI:
    ```bash
-   npm install -g vercel
+   pnpm add -g vercel
    ```
 
 2. Login and link project:
@@ -108,14 +108,14 @@ Before pushing, test builds locally:
 
 **For Vite:**
 ```bash
-npm run build
-npm run preview
+pnpm run build
+pnpm run preview
 ```
 
 **For Next.js (after migration):**
 ```bash
-npm run build
-npm run start
+pnpm run build
+pnpm run start
 ```
 
 ## Troubleshooting
