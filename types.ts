@@ -16,6 +16,7 @@ export interface TeamMember {
   role: string;
   description: string;
   tags?: string[];
+  avatarUrl?: string;  // 可选的头像 URL
 }
 
 export interface Feature {
@@ -33,4 +34,16 @@ export interface Benefit {
 export interface Partner {
   name: string;
   category: string;
+}
+
+export interface Mentor {
+  name: string;
+  avatarUrl?: string;
+}
+
+export interface Testimonial {
+  logo: string;
+  color: string;
+  quote: string;
+  author: string;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CORE_TEAM, FOUNDER, ADVISORS } from '../constants';
+import { CORE_TEAM, FOUNDER, ADVISORS, MENTOR_AVATARS, MENTOR_CONFIG, ADDITIONAL_MENTORS } from '../constants';
 import { Quote } from 'lucide-react';
 
 const Team: React.FC = () => {
@@ -35,9 +35,9 @@ const Team: React.FC = () => {
               <div className="w-full md:w-1/3 relative min-h-[400px]">
                 <div className="absolute inset-0 bg-brand-900/20 z-10 group-hover:bg-transparent transition-colors duration-500"></div>
                 <img
-                  src={`https://picsum.photos/seed/${FOUNDER.name}/500/600`} // Replace with real image
+                  src={FOUNDER.avatarUrl || `https://picsum.photos/seed/${FOUNDER.name}/500/600`}
                   alt={FOUNDER.name}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover object-center transition-all duration-700"
                 />
                 <div className="absolute bottom-6 left-6 z-20">
                   <div className="bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded mb-2 inline-block shadow-lg">FOUNDER</div>
@@ -89,9 +89,9 @@ const Team: React.FC = () => {
               >
                 <div className="w-20 h-20 rounded-full bg-slate-800 mb-6 mx-auto overflow-hidden border-2 border-slate-700 group-hover:border-brand-500 transition-colors shadow-xl">
                   <img
-                    src={`https://picsum.photos/seed/${member.name}/200`}
+                    src={member.avatarUrl || `https://picsum.photos/seed/${member.name}/200`}
                     alt={member.name}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover object-top transition-all duration-500"
                   />
                 </div>
 
@@ -134,9 +134,9 @@ const Team: React.FC = () => {
               >
                 <div className="w-16 h-16 rounded-full bg-slate-800 mr-6 overflow-hidden shrink-0 border border-slate-700">
                   <img
-                    src={`https://picsum.photos/seed/${advisor.name}/200`}
+                    src={advisor.avatarUrl || `https://picsum.photos/seed/${advisor.name}/200`}
                     alt={advisor.name}
-                    className="w-full h-full object-cover grayscale"
+                    className="w-full h-full object-cover object-top object-left"
                   />
                 </div>
                 <div>
@@ -157,7 +157,9 @@ const Team: React.FC = () => {
             className="mt-12 text-center"
           >
             <p className="text-slate-500 text-sm">
-              获得 <span className="text-slate-300">极客湾创始人</span>、<span className="text-slate-300">强脑科技</span>、<span className="text-slate-300">清华校友会</span> 等大咖支持
+              获得 {ADDITIONAL_MENTORS.map((mentor, index) => (
+                <span key={index} className="text-slate-300">{mentor}</span>
+              )).reduce((prev, curr) => [prev, '、', curr])} 等大咖支持
             </p>
           </motion.div>
         </div>
@@ -174,25 +176,25 @@ const Team: React.FC = () => {
             <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-950/80 to-transparent z-10"></div>
 
             {/* Row 1 - Scroll Left */}
-            <div className="flex w-max">
+            <div className="flex w-max items-start">
               <motion.div
-                className="flex gap-6 pr-6"
+                className="flex gap-6 pr-6 items-start"
                 animate={{ x: ["0%", "-50%"] }}
                 transition={{
                   repeat: Infinity,
                   ease: "linear",
-                  duration: 40,
+                  duration: MENTOR_CONFIG.scrollDuration_A,
                 }}
               >
-                {[...Array(30)].map((_, i) => (
+                {MENTOR_AVATARS.rowA.map((avatarUrl, i) => (
                   <div
                     key={`row1-${i}`}
-                    className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-white/10 bg-slate-800 overflow-hidden shrink-0 hover:scale-110 hover:border-brand-500 transition-all duration-300 cursor-pointer grayscale hover:grayscale-0"
+                    className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-white/10 bg-slate-800 overflow-hidden shrink-0 hover:scale-110 hover:border-brand-500 transition-all duration-300 cursor-pointer"
                   >
                     <img
-                      src={`https://picsum.photos/seed/mentorA${i}/200`}
+                      src={avatarUrl}
                       alt={`Mentor A${i}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                 ))}
@@ -200,26 +202,26 @@ const Team: React.FC = () => {
             </div>
 
             {/* Row 2 - Scroll Right */}
-            <div className="flex w-max">
+            <div className="flex w-max items-start">
               <motion.div
-                className="flex gap-6 pr-6"
+                className="flex gap-6 pr-6 items-start"
                 initial={{ x: "-50%" }}
                 animate={{ x: ["-50%", "0%"] }}
                 transition={{
                   repeat: Infinity,
                   ease: "linear",
-                  duration: 45,
+                  duration: MENTOR_CONFIG.scrollDuration_B,
                 }}
               >
-                {[...Array(30)].map((_, i) => (
+                {MENTOR_AVATARS.rowB.map((avatarUrl, i) => (
                   <div
                     key={`row2-${i}`}
-                    className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-white/10 bg-slate-800 overflow-hidden shrink-0 hover:scale-110 hover:border-brand-500 transition-all duration-300 cursor-pointer grayscale hover:grayscale-0"
+                    className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-white/10 bg-slate-800 overflow-hidden shrink-0 hover:scale-110 hover:border-brand-500 transition-all duration-300 cursor-pointer"
                   >
                     <img
-                      src={`https://picsum.photos/seed/mentorB${i}/200`}
+                      src={avatarUrl}
                       alt={`Mentor B${i}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                 ))}
