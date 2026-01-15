@@ -1,14 +1,28 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Moon, Sun } from 'lucide-react';
-import { useTheme } from '../contexts/ThemeContext';
+import { useTheme } from 'next-themes';
 
 const ThemeToggle: React.FC = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Prevent hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div className="relative w-14 h-7 rounded-full bg-slate-700 border-2 border-slate-600" />
+    );
+  }
 
   return (
     <motion.button
-      onClick={toggleTheme}
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className="relative w-14 h-7 rounded-full bg-slate-700 dark:bg-slate-600 border-2 border-slate-600 dark:border-slate-500 transition-colors duration-300"

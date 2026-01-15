@@ -1,7 +1,19 @@
-import React, { useRef } from 'react';
+'use client';
+
+import React, { useRef, Suspense } from 'react';
 import { ArrowRight, PlayCircle } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import Hero3DBackground from './Hero3DBackground';
+import dynamic from 'next/dynamic';
+
+const Hero3DBackground = dynamic(
+  () => import('./Hero3DBackground').then(mod => mod.default),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="absolute inset-0 bg-brand-950/20 animate-pulse" />
+    ),
+  }
+);
 
 const Hero: React.FC = () => {
   const containerRef = useRef<HTMLElement>(null);
