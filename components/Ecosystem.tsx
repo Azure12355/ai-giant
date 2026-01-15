@@ -108,7 +108,7 @@ const MarqueeRow = ({ items, direction = "left" }: { items: string[], direction?
         animate={{ x: direction === 'left' ? "-50%" : "0%" }}
         initial={{ x: direction === 'left' ? "0%" : "-50%" }}
         transition={{
-          duration: 30,
+          duration: 80,
           repeat: Infinity,
           ease: "linear",
           repeatType: "loop"

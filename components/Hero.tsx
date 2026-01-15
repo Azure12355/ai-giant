@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             href="#market"
-            className="flex items-center justify-center px-8 py-4 border border-brand-400/50 text-base font-bold rounded-full text-black bg-gradient-to-r from-brand-300 via-brand-500 to-brand-600 hover:shadow-[0_0_30px_rgba(245,158,11,0.6)] transition-all"
+            className="flex items-center justify-center px-8 py-4 border border-brand-400/50 text-base font-bold rounded-full text-white bg-gradient-to-r from-brand-300 via-brand-500 to-brand-600 hover:shadow-[0_0_30px_rgba(245,158,11,0.6)] transition-all"
           >
             探索未来 <ArrowRight className="ml-2 h-5 w-5" />
           </motion.a>
