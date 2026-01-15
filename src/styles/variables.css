@@ -1,0 +1,230 @@
+/* 全局 CSS 变量 */
+
+:root {
+  /* 品牌色系 */
+  --brand-50: #eff6ff;
+  --brand-100: #dbeafe;
+  --brand-200: #bfdbfe;
+  --brand-300: #93c5fd;
+  --brand-400: #60a5fa;
+  --brand-500: #3b82f6;
+  --brand-600: #2563eb;
+  --brand-700: #1d4ed8;
+  --brand-800: #1e40af;
+  --brand-900: #1e3a8a;
+  --brand-950: #172554;
+
+  /* 中性色 */
+  --white: #ffffff;
+  --black: #000000;
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
+
+  /* 间距 */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+
+  /* 圆角 */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* 过渡 */
+  --transition-fast: 150ms;
+  --transition-base: 300ms;
+  --transition-slow: 500ms;
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+
+  /* 字体 */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+/* 全局滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--slate-950);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-800);
+  border-radius: 4px;
+  border: 1px solid var(--brand-900);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-500);
+}
+
+/* 全局基础样式 */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--black);
+  color: var(--slate-50);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition-base) ease,
+              color var(--transition-base) ease;
+}
+
+/* Light Mode */
+html.light body {
+  background-color: var(--slate-50);
+  color: var(--slate-950);
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: var(--slate-200);
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: var(--brand-500);
+  border: 1px solid var(--brand-600);
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-600);
+}
+
+/* 通用工具类 */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-gold {
+  background: rgba(59, 130, 246, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.05) inset;
+}
+
+.glass-card:hover {
+  background: rgba(59, 130, 246, 0.05);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  transform: translateY(-4px);
+  transition: all var(--transition-base) ease;
+  box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.15);
+}
+
+/* 渐变文字 */
+.text-gradient {
+  background: linear-gradient(to right, var(--brand-100), var(--brand-500), var(--brand-700));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 星空背景 */
+.bg-stars {
+  background-image:
+    radial-gradient(1.5px 1.5px at 20px 30px, var(--brand-400), rgba(0, 0, 0, 0)),
+    radial-gradient(1.5px 1.5px at 40px 70px, var(--white), rgba(0, 0, 0, 0)),
+    radial-gradient(1.5px 1.5px at 50px 160px, var(--brand-600), rgba(0, 0, 0, 0)),
+    radial-gradient(1.5px 1.5px at 90px 40px, var(--white), rgba(0, 0, 0, 0)),
+    radial-gradient(1.5px 1.5px at 130px 80px, var(--brand-500), rgba(0, 0, 0, 0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: twinkle 5s infinite linear;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.6;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.6;
+    transform: translateY(-20px);
+  }
+}
+
+/* 渐变边框 */
+.border-gradient {
+  border-image: linear-gradient(to right,
+    rgba(59, 130, 246, 0.1),
+    rgba(59, 130, 246, 0.5),
+    rgba(59, 130, 246, 0.1)
+  ) 1;
+}
+
+/* 动画 */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s linear infinite;
+}

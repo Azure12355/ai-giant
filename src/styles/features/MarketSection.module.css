@@ -1,0 +1,139 @@
+/* MarketSection Component Styles - 基于原始 Tailwind 样式精确转换 */
+
+.section {
+  padding: 6rem 0;
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  border-top: 1px solid rgba(30, 58, 138, 0.2);
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 4.5rem;
+  }
+}
+
+.description {
+  color: rgb(148, 163, 184);
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .contentGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.iconBox {
+  flex-shrink: 0;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBoxBlue {
+  background-color: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.iconBoxBrand {
+  background-color: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.iconBoxDark {
+  background-color: rgba(29, 78, 216, 0.1);
+  border: 1px solid rgba(29, 78, 216, 0.2);
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.iconBlue {
+  color: rgb(96, 165, 250);
+}
+
+.iconBrand {
+  color: rgb(59, 130, 246);
+}
+
+.iconDark {
+  color: rgb(37, 99, 235);
+}
+
+.featureContent {
+  flex: 1;
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 0.5rem;
+}
+
+.featureDescription {
+  color: rgb(148, 163, 184);
+}
+
+.blockquote {
+  border-left: 4px solid rgb(59, 130, 246);
+  padding-left: 1rem;
+  font-style: italic;
+  color: rgb(203, 213, 225);
+}

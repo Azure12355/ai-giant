@@ -1,0 +1,347 @@
+/* PainPoints Component Styles - 基于原始 Tailwind 样式精确转换 */
+
+.section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(30, 58, 138, 0.2);
+}
+
+.backgroundBlob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(3rem);
+  pointer-events: none;
+}
+
+.blobTop {
+  top: 0;
+  right: 0;
+  width: 20rem;
+  height: 20rem;
+  background-color: rgba(49, 46, 129, 0.2);
+  margin-right: -5rem;
+  margin-top: -5rem;
+}
+
+.blobBottom {
+  bottom: 0;
+  left: 0;
+  width: 20rem;
+  height: 20rem;
+  background-color: rgba(30, 64, 175, 0.2);
+  margin-left: -5rem;
+  margin-bottom: -5rem;
+}
+
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+.subtitle {
+  color: rgb(59, 130, 246);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.description {
+  color: rgb(148, 163, 184);
+  margin-top: 1rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 300ms ease;
+}
+
+.card:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.iconBox {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  background-color: rgb(15, 23, 42);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 300ms ease, border-color 300ms ease;
+}
+
+.card:hover .iconBox {
+  background-color: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: rgb(148, 163, 184);
+  transition: color 300ms ease;
+}
+
+.card:hover .icon {
+  color: rgb(96, 165, 250);
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 0.75rem;
+}
+
+.cardDescription {
+  color: rgb(148, 163, 184);
+  line-height: 1.75;
+  font-size: 0.875rem;
+}
+
+/* Opportunity Gap Section */
+.opportunityGap {
+  position: relative;
+  margin-top: 5rem;
+  padding: 0.25rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(to right, rgba(30, 64, 175, 0.3), rgba(37, 99, 235, 0.3));
+}
+
+.opportunityGapContent {
+  background-color: rgb(2, 6, 23);
+  padding: 2rem;
+  border-radius: 1.375rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .opportunityGapContent {
+    padding: 3.5rem;
+  }
+}
+
+.opportunityLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .opportunityLayout {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.opportunitySide {
+  flex: 1;
+}
+
+.opportunitySideLeft {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .opportunitySideLeft {
+    text-align: left;
+  }
+}
+
+.opportunitySideRight {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .opportunitySideRight {
+    text-align: right;
+  }
+}
+
+.opportunityLabel {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: rgb(148, 163, 184);
+  margin-bottom: 0.5rem;
+}
+
+.opportunityValue {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.5rem;
+}
+
+.opportunityValueBlue {
+  color: rgb(59, 130, 246);
+}
+
+.opportunityValueWhite {
+  color: rgb(255, 255, 255);
+}
+
+@media (min-width: 768px) {
+  .opportunityValue {
+    font-size: 3.75rem;
+  }
+}
+
+.opportunityUnit {
+  font-size: 2.5rem;
+}
+
+.opportunitySubtext {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.opportunitySubtextBlue {
+  color: rgb(191, 219, 254);
+}
+
+.opportunitySubtextSlate {
+  color: rgb(226, 232, 240);
+}
+
+.opportunityNote {
+  color: rgb(71, 85, 105);
+  font-size: 0.875rem;
+}
+
+/* Connector */
+.connectorContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.connectorBadge {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: rgb(37, 99, 235);
+  border-radius: 9999px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 0.875rem;
+  z-index: 20;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+.connectorLineBase {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: rgba(30, 64, 175, 0.3);
+  transform: translateY(-50%);
+  z-index: -10;
+}
+
+.connectorLineAnimated {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgb(59, 130, 246), transparent);
+  transform: translateY(-50%);
+  z-index: -10;
+}
+
+.opportunityFooter {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.opportunityFooterText {
+  font-size: 1.25rem;
+  color: rgb(203, 213, 225);
+}
+
+.opportunityHighlight {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, rgb(96, 165, 250), rgb(191, 219, 254));
+  font-weight: 700;
+}

@@ -1,0 +1,68 @@
+/* MarketChart Component Styles - 基于原始 Tailwind 样式精确转换 */
+
+.container {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  background-color: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.backgroundGlow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16rem;
+  height: 16rem;
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  filter: blur(80px);
+  margin-right: -4rem;
+  margin-top: -4rem;
+  pointer-events: none;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.titleIndicator {
+  width: 0.25rem;
+  height: 1.5rem;
+  background-color: rgb(59, 130, 246);
+  margin-right: 0.75rem;
+  border-radius: 9999px;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.titleText {
+  letter-spacing: 0.025em;
+}
+
+.chartContainer {
+  width: 100%;
+  height: 85%;
+  position: relative;
+  z-index: 10;
+}
+
+.subtitle {
+  text-align: center;
+  color: rgb(100, 116, 139);
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,199 @@
+/* 导入全局变量 */
+@import '../styles/variables.css';
+
+/* 重置样式 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* 工具类 */
+.container {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Section padding */
+.section {
+  padding: 6rem 0;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 6rem 0;
+  }
+}
+
+/* Grid 布局 */
+.grid {
+  display: grid;
+}
+
+.gridCols1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .gridCols2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .gridCols4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Flex 布局 */
+.flex {
+  display: flex;
+}
+
+.flexCol {
+  flex-direction: column;
+}
+
+.itemsCenter {
+  align-items: center;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyBetween {
+  justify-content: space-between;
+}
+
+.gap4 {
+  gap: 1rem;
+}
+
+.gap6 {
+  gap: 1.5rem;
+}
+
+.gap8 {
+  gap: 2rem;
+}
+
+/* 文本对齐 */
+.textCenter {
+  text-align: center;
+}
+
+/* 响应式显示 - 使用 data 属性或 class */
+.hidden {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .sm-block {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .md-block {
+    display: block;
+  }
+  .md-flex {
+    display: flex;
+  }
+  .md-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg-block {
+    display: block;
+  }
+  .lg-flex {
+    display: flex;
+  }
+}

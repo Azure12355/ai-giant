@@ -1,0 +1,202 @@
+/* Shared styles for features components */
+
+/* Section styles */
+.section {
+  padding: 6rem 0;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 6rem 0;
+  }
+}
+
+.sectionBorderTop {
+  border-top: 1px solid rgba(30, 58, 138, 0.2);
+}
+
+/* Container */
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* Backgrounds */
+.bgBlack {
+  background-color: var(--black);
+}
+
+.bgSlate950 {
+  background-color: rgba(2, 6, 23, 0.2);
+}
+
+.bgGradient {
+  background-image: radial-gradient(ellipse at center, var(--brand-900/10), var(--black));
+}
+
+/* Text styles */
+.heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 4rem;
+  }
+}
+
+.subheading {
+  font-size: 1.125rem;
+  color: var(--brand-500);
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.description {
+  color: var(--slate-400);
+  text-align: center;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+/* Grid layouts */
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .grid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .grid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Card styles */
+.card {
+  background-color: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all var(--transition-base) ease;
+}
+
+.card:hover {
+  background-color: rgba(15, 23, 42, 0.6);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Icon box */
+.iconBox {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--slate-900);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card:hover .iconBox {
+  background-color: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Buttons */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-base) ease;
+  cursor: pointer;
+  border: none;
+}
+
+.buttonPrimary {
+  background: linear-gradient(to right, var(--brand-500), var(--brand-700));
+  color: var(--white);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+.buttonPrimary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.6);
+}
+
+/* Marquee */
+.marqueeContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.marqueeGradient {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 5rem;
+  z-index: 10;
+}
+
+.marqueeGradientLeft {
+  left: 0;
+  background: linear-gradient(to right, var(--slate-950), transparent);
+}
+
+.marqueeGradientRight {
+  right: 0;
+  background: linear-gradient(to left, var(--slate-950), transparent);
+}

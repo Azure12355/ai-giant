@@ -1,0 +1,628 @@
+/* Recruit Component Styles - 基于原始 Tailwind 样式精确转换 */
+
+.section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(30, 58, 138, 0.3));
+}
+
+/* Background Elements */
+.noiseBackground {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+  opacity: 0.2;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.backgroundGlow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.glowTop {
+  top: 0;
+  right: 0;
+  background-color: rgba(37, 99, 235, 0.1);
+  margin-right: -8rem;
+  margin-top: -8rem;
+}
+
+.glowBottom {
+  bottom: 0;
+  left: 0;
+  background-color: rgba(37, 99, 235, 0.1);
+  margin-left: -8rem;
+  margin-bottom: -8rem;
+}
+
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.headerTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 768px) {
+  .headerTitle {
+    font-size: 3rem;
+  }
+}
+
+.headerSubtitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.headerDividerLine {
+  height: 1px;
+  width: 3rem;
+}
+
+.headerDividerLineLeft {
+  background: linear-gradient(to right, transparent, rgb(59, 130, 246));
+}
+
+.headerDividerLineRight {
+  background: linear-gradient(to left, transparent, rgb(59, 130, 246));
+}
+
+.headerSubtitle {
+  color: rgb(96, 165, 250);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .headerSubtitle {
+    font-size: 1rem;
+  }
+}
+
+.headerNote {
+  margin-top: 1rem;
+  color: rgb(100, 116, 139);
+  font-size: 0.875rem;
+}
+
+/* Requirements Grid */
+.requirementsSection {
+  margin-bottom: 6rem;
+}
+
+.requirementsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .requirementsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.requirementCard {
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.requirementCard:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.1);
+}
+
+.requirementIconBox {
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(to bottom right, rgb(30, 41, 59), rgb(15, 23, 42));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  color: rgb(59, 130, 246);
+  transition: all 500ms ease;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+}
+
+.requirementCard:hover .requirementIconBox {
+  transform: scale(1.1);
+  background: linear-gradient(to bottom right, rgb(37, 99, 235), rgb(30, 64, 175));
+  color: rgb(255, 255, 255);
+}
+
+.requirementIcon {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.requirementTitle {
+  color: rgb(255, 255, 255);
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  transition: color 300ms ease;
+}
+
+.requirementCard:hover .requirementTitle {
+  color: rgb(96, 165, 250);
+}
+
+.requirementDescription {
+  color: rgb(148, 163, 184);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Revenue Streams */
+.revenueSection {
+  margin-bottom: 8rem;
+  position: relative;
+}
+
+.revenueHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.revenueTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+  letter-spacing: -0.025em;
+}
+
+.revenueSubtitle {
+  color: rgb(148, 163, 184);
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Marquee */
+.marqueeContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marqueeMask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 8rem;
+  z-index: 20;
+}
+
+.marqueeMaskLeft {
+  left: 0;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.8), transparent);
+}
+
+.marqueeMaskRight {
+  right: 0;
+  background: linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0.8), transparent);
+}
+
+.marqueeTrack {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+}
+
+.revenueCard {
+  position: relative;
+  width: 280px;
+  height: 320px;
+  flex-shrink: 0;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.revenueCardInner {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(15, 23, 42, 0.9), rgb(0, 0, 0));
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 500ms ease;
+  overflow: hidden;
+}
+
+.revenueCard:hover .revenueCardInner {
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 50px rgba(59, 130, 246, 0.2);
+}
+
+.revenueCardShine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top right, transparent, rgba(255, 255, 255, 0.05), transparent);
+  opacity: 0;
+  transition: opacity 700ms ease, transform 700ms ease;
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+
+.revenueCard:hover .revenueCardShine {
+  opacity: 1;
+  transform: translateX(100%);
+}
+
+.revenueCardOrb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8rem;
+  height: 8rem;
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  filter: blur(2rem);
+  transition: background-color 500ms ease;
+}
+
+.revenueCard:hover .revenueCardOrb {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+.revenueCardIconBox {
+  position: relative;
+  z-index: 10;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms ease;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.revenueCard:hover .revenueCardIconBox {
+  background-color: rgb(37, 99, 235);
+  transform: scale(1.1);
+}
+
+.revenueCardIcon {
+  width: 2rem;
+  height: 2rem;
+  color: rgb(96, 165, 250);
+  transition: color 300ms ease;
+}
+
+.revenueCard:hover .revenueCardIcon {
+  color: rgb(255, 255, 255);
+}
+
+.revenueCardText {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.revenueCardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 0.5rem;
+  transition: color 300ms ease;
+}
+
+.revenueCard:hover .revenueCardTitle {
+  color: rgb(147, 197, 253);
+}
+
+.revenueCardDivider {
+  height: 0.25rem;
+  width: 2rem;
+  background-color: rgb(30, 58, 138);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 9999px;
+  transition: all 500ms ease;
+}
+
+.revenueCard:hover .revenueCardDivider {
+  width: 4rem;
+  background-color: rgb(59, 130, 246);
+}
+
+.revenueCardCorner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(to bottom left, rgba(59, 130, 246, 0.1), transparent);
+  border-bottom-left-radius: 9999px;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.revenueCard:hover .revenueCardCorner {
+  opacity: 1;
+}
+
+/* Process Flow */
+.processSection {
+  margin-bottom: 6rem;
+}
+
+.processTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.processContainer {
+  position: relative;
+}
+
+.processConnectingLine {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(59, 130, 246, 0.3), transparent);
+}
+
+@media (min-width: 768px) {
+  .processConnectingLine {
+    display: block;
+  }
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .processGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.processStep {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.processStepIconBox {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: rgb(2, 6, 23);
+  border: 4px solid rgba(30, 58, 138, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transition: border-color 300ms ease;
+}
+
+.processStepIconBox:hover {
+  border-color: rgb(59, 130, 246);
+}
+
+.processStepIcon {
+  width: 2rem;
+  height: 2rem;
+  color: rgb(59, 130, 246);
+  transition: transform 300ms ease;
+}
+
+.processStepIconBox:hover .processStepIcon {
+  transform: scale(1.1);
+}
+
+.processStepText {
+  text-align: center;
+}
+
+.processStepTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 0.25rem;
+}
+
+.processStepSubtitle {
+  font-size: 0.75rem;
+  color: rgba(59, 130, 246, 0.6);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.processStepBadge {
+  position: absolute;
+  top: -0.5rem;
+  right: 50%;
+  margin-right: -2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: rgb(37, 99, 235);
+  border-radius: 50%;
+  font-size: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  box-shadow: 0 0 0 4px rgb(0, 0, 0);
+}
+
+/* CTA Section */
+.ctaSection {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  padding: 2.5rem;
+  text-align: center;
+  background: linear-gradient(to bottom right, rgba(30, 58, 138, 0.4), rgb(0, 0, 0));
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px) {
+  .ctaSection {
+    padding: 4rem;
+  }
+}
+
+.ctaNoise {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+  opacity: 0.1;
+  mix-blend-mode: overlay;
+}
+
+.ctaGradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(2, 6, 23, 0.8), transparent);
+  pointer-events: none;
+}
+
+.ctaTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .ctaTitle {
+    font-size: 3.75rem;
+  }
+}
+
+.ctaQuote {
+  font-size: 1.25rem;
+  color: rgb(203, 213, 225);
+  margin-bottom: 2.5rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+  position: relative;
+  z-index: 10;
+  line-height: 1.75;
+}
+
+.ctaQuoteAuthor {
+  display: block;
+  margin-top: 1rem;
+  color: rgb(96, 165, 250);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.ctaButtonContainer {
+  position: relative;
+  z-index: 10;
+}
+
+.ctaButton {
+  background-color: rgb(37, 99, 235);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  border-radius: 9999px;
+  font-size: 1.125rem;
+  box-shadow: 0 0 40px rgba(37, 99, 235, 0.5);
+  transition: all 300ms ease;
+  border: none;
+  cursor: pointer;
+}
+
+.ctaButton:hover {
+  background-color: rgb(59, 130, 246);
+}

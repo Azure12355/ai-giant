@@ -1,0 +1,62 @@
+/* ThemeToggle Component Styles */
+
+.themeToggle {
+  position: relative;
+  width: 3.5rem;
+  height: 2rem;
+  background-color: rgba(30, 58, 138, 0.3);
+  border-radius: 9999px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  cursor: pointer;
+  transition: all var(--transition-base) ease;
+}
+
+.themeToggle:hover {
+  background-color: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.slider {
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-400), var(--brand-600));
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform var(--transition-base) ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themeToggle.dark .slider {
+  transform: translateX(1.5rem);
+}
+
+.themeToggle.light .slider {
+  transform: translateX(0);
+}
+
+.icon {
+  color: var(--white);
+  width: 1rem;
+  height: 1rem;
+}
+
+.iconSun {
+  display: none;
+}
+
+.themeToggle.light .iconSun {
+  display: block;
+}
+
+.iconMoon {
+  display: block;
+}
+
+.themeToggle.light .iconMoon {
+  display: none;
+}

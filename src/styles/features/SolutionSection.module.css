@@ -1,0 +1,153 @@
+/* SolutionSection Component Styles - 基于原始 Tailwind 样式精确转换 */
+
+.section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  border-top: 1px solid rgba(30, 58, 138, 0.2);
+}
+
+.noiseBackground {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+  opacity: 0.1;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+.description {
+  color: rgb(148, 163, 184);
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.descriptionHighlight {
+  color: rgb(96, 165, 250);
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(15, 23, 42, 0.5);
+  transition: all 300ms ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: rgba(59, 130, 246, 0.5);
+  background-color: rgba(30, 58, 138, 0.1);
+}
+
+.cardCorner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6rem;
+  height: 6rem;
+  background-color: rgba(59, 130, 246, 0.05);
+  border-bottom-left-radius: 9999px;
+  margin-right: -1rem;
+  margin-top: -1rem;
+  transition: transform 300ms ease;
+}
+
+.card:hover .cardCorner {
+  transform: scale(1.5);
+}
+
+.iconBox {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(to bottom right, rgb(96, 165, 250), rgb(37, 99, 235));
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cardIcon {
+  color: rgb(0, 0, 0);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 0.75rem;
+}
+
+.cardDescription {
+  color: rgb(148, 163, 184);
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
