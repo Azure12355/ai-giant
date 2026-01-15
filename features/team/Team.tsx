@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CORE_TEAM, FOUNDER, ADVISORS, MENTOR_AVATARS, MENTOR_CONFIG, ADDITIONAL_MENTORS } from '../constants';
+import { CORE_TEAM, FOUNDER, ADVISORS, MENTOR_AVATARS, MENTOR_CONFIG, ADDITIONAL_MENTORS } from '@/constants';
 import { Quote } from 'lucide-react';
 
 const Team: React.FC = () => {

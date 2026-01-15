@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Quote } from 'lucide-react';
-import { TESTIMONIALS, PARTNER_LOGOS } from '../constants';
+import { TESTIMONIALS, PARTNER_LOGOS } from '@/constants';
 
 const Ecosystem: React.FC = () => {
   // 定义动画变体

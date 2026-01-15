@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SOLUTIONS } from '../constants';
+import { SOLUTIONS } from '@/constants';
 
 const SolutionSection: React.FC = () => {
   return (

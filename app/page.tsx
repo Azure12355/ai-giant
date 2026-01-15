@@ -1,12 +1,12 @@
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import MarketSection from '@/components/MarketSection';
-import PainPoints from '@/components/PainPoints';
-import SolutionSection from '@/components/SolutionSection';
-import Team from '@/components/Team';
-import Ecosystem from '@/components/Ecosystem';
-import Recruit from '@/components/Recruit';
-import Footer from '@/components/Footer';
+import { Navbar } from '@/features/navigation';
+import { Hero } from '@/features/hero';
+import { MarketSection } from '@/features/market';
+import { PainPoints } from '@/features/pain-points';
+import { SolutionSection } from '@/features/solutions';
+import { Team } from '@/features/team';
+import { Ecosystem } from '@/features/ecosystem';
+import { Recruit } from '@/features/recruit';
+import { Footer } from '@/features/navigation';
 
 export default function Home() {
   return (

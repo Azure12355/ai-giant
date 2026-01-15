@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import { motion, useInView, useSpring, useTransform, useMotionValue, animate } from 'framer-motion';
-import { PAIN_POINTS } from '../constants';
+import { PAIN_POINTS } from '@/constants';
 import { useEffect } from 'react';
 
 const Counter = ({ from, to }: { from: number; to: number }) => {
