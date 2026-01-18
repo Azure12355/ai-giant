@@ -4,10 +4,12 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { NAV_ITEMS } from '@/lib/constants';
 import styles from '@/styles/features/Navbar.module.css';
+import ContactModal from '@/features/common/ContactModal';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,9 +44,12 @@ const Navbar: React.FC = () => {
                   {item.label}
                 </a>
               ))}
-              <a href="#join" className={styles.ctaButton}>
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className={styles.ctaButton}
+              >
                 立即咨询
-              </a>
+              </button>
             </div>
           </div>
 
@@ -77,6 +82,8 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       )}
+
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </nav>
   );
 };

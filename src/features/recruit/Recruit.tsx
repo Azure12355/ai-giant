@@ -8,8 +8,11 @@ import {
   MessageCircle, MapPin, PenTool
 } from 'lucide-react';
 import styles from '@/styles/features/Recruit.module.css';
+import ContactModal from '@/features/common/ContactModal';
 
 const Recruit: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+
   const requirements = [
     {
       icon: Rocket,
@@ -239,6 +242,7 @@ const Recruit: React.FC = () => {
             className={styles.ctaButtonContainer}
           >
             <motion.button
+              onClick={() => setIsModalOpen(true)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={styles.ctaButton}
@@ -246,6 +250,8 @@ const Recruit: React.FC = () => {
               立即加入我们
             </motion.button>
           </motion.div>
+
+          <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </div>
 
       </div>

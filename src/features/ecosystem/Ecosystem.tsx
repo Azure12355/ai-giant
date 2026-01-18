@@ -1,12 +1,14 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Quote } from 'lucide-react';
 import { TESTIMONIALS, PARTNER_LOGOS } from '@/lib/constants';
 import styles from '@/styles/features/Ecosystem.module.css';
+import ContactModal from '@/features/common/ContactModal';
 
 const Ecosystem: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   // 定义动画变体
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -26,7 +28,7 @@ const Ecosystem: React.FC = () => {
       y: 0,
       scale: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 12,
         stiffness: 100,
       }
@@ -39,7 +41,7 @@ const Ecosystem: React.FC = () => {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 15,
         stiffness: 120,
       }
@@ -143,8 +145,8 @@ const Ecosystem: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className={styles.ctaContainer}
           >
-            <motion.a
-              href="#join"
+            <motion.button
+              onClick={() => setIsModalOpen(true)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               className={styles.ctaButton}
@@ -152,7 +154,9 @@ const Ecosystem: React.FC = () => {
               <span className={styles.ctaButtonText}>立即加盟生态</span>
               <ArrowRight className={styles.ctaButtonIcon} />
               <div className={styles.ctaButtonOverlay}></div>
-            </motion.a>
+            </motion.button>
+
+            <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
           </motion.div>
         </motion.div>
       </div>
