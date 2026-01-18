@@ -333,3 +333,127 @@
 .ctaButton:hover .ctaButtonOverlay {
   transform: translateY(0);
 }
+
+/* ========================================
+   LIGHT THEME STYLES
+   Comprehensive light theme variants with purple-blue gradient accents
+   ======================================== */
+
+/* Section - White background with subtle blue-purple radial gradients */
+html.light .section {
+  background-color: #ffffff;
+  border-top: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+html.light .radialGradient {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(139, 92, 246, 0.08) 0%,
+    rgba(59, 130, 246, 0.05) 25%,
+    rgba(167, 139, 250, 0.03) 50%,
+    #ffffff 70%,
+    #ffffff 100%
+  );
+}
+
+/* Header - Dark text for readability */
+html.light .title {
+  color: rgb(15, 23, 42);
+}
+
+html.light .subtitle {
+  color: rgb(71, 85, 105);
+}
+
+html.light .subtitle:hover {
+  color: rgb(139, 92, 246);
+}
+
+html.light .subtitleLink {
+  color: rgb(139, 92, 246);
+}
+
+/* Testimonial Cards - White background with purple-blue borders */
+html.light .testimonialCard {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+html.light .testimonialCard:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.15), 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+html.light .testimonialQuoteIcon {
+  color: rgba(139, 92, 246, 0.08);
+}
+
+html.light .testimonialCard:hover .testimonialQuoteIcon {
+  color: rgba(139, 92, 246, 0.2);
+}
+
+/* Testimonial Logo Box - Purple gradient backgrounds */
+html.light .testimonialLogoBox {
+  background: linear-gradient(135deg, rgb(139, 92, 246) 0%, rgb(59, 130, 246) 100%);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+/* Testimonial Quote - Dark text for readability */
+html.light .testimonialQuote {
+  color: rgb(51, 65, 85);
+}
+
+/* Testimonial Footer - Purple accent */
+html.light .testimonialDivider {
+  background-color: rgb(203, 213, 225);
+}
+
+html.light .testimonialCard:hover .testimonialDivider {
+  background: linear-gradient(90deg, rgb(139, 92, 246), rgb(59, 130, 246));
+}
+
+html.light .testimonialAuthor {
+  color: rgb(71, 85, 105);
+}
+
+html.light .testimonialCard:hover .testimonialAuthor {
+  color: rgb(139, 92, 246);
+}
+
+/* Marquee Section - Light gradient masks */
+html.light .marqueeMaskLeft {
+  background: linear-gradient(to right, #ffffff, transparent);
+}
+
+html.light .marqueeMaskRight {
+  background: linear-gradient(to left, #ffffff, transparent);
+}
+
+/* Partner Logo Box - Enhanced with purple-blue border */
+html.light .partnerLogoBox {
+  background-color: #ffffff;
+  border: 3px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+}
+
+html.light .partnerLogo:hover .partnerLogoBox {
+  border-color: rgb(139, 92, 246);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.25);
+}
+
+/* CTA Button - Purple-blue gradient */
+html.light .ctaButton {
+  background: linear-gradient(135deg, rgb(139, 92, 246) 0%, rgb(59, 130, 246) 100%);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4), 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+html.light .ctaButton:hover {
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5), 0 0 30px rgba(139, 92, 246, 0.4);
+}
+
+html.light .ctaButtonOverlay {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.3) 0%, rgba(96, 165, 250, 0.3) 100%);
+}

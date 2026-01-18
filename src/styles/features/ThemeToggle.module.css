@@ -60,3 +60,63 @@
 .themeToggle.light .iconMoon {
   display: none;
 }
+
+/* ========================================
+   LIGHT THEME STYLES
+   Comprehensive light mode variants using purple-blue accent colors
+   Purple: rgb(139, 92, 246), rgb(167, 139, 250)
+   Blue: rgb(59, 130, 246), rgb(96, 165, 250)
+   ======================================== */
+
+/* Theme Toggle Container - Light Theme */
+html.light .themeToggle {
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(167, 139, 250);
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.15);
+}
+
+html.light .themeToggle:hover {
+  background-color: rgb(249, 250, 251);
+  border-color: rgb(139, 92, 246);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
+}
+
+/* Slider - Light Theme with Purple Gradient */
+html.light .slider {
+  background: linear-gradient(135deg, rgb(167, 139, 250), rgb(139, 92, 246));
+  box-shadow: 0 2px 6px rgba(139, 92, 246, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+html.light .themeToggle:hover .slider {
+  background: linear-gradient(135deg, rgb(139, 92, 246), rgb(59, 130, 246));
+  box-shadow: 0 3px 8px rgba(139, 92, 246, 0.4), 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Colors - Light Theme */
+html.light .icon {
+  color: rgb(255, 255, 255);
+  filter: brightness(1.1);
+}
+
+/* Additional Light Theme Button States */
+html.light .themeToggle:active {
+  transform: scale(0.97);
+  box-shadow: 0 1px 4px rgba(139, 92, 246, 0.2);
+}
+
+/* Focus State for Accessibility - Light Theme */
+html.light .themeToggle:focus-visible {
+  outline: 2px solid rgb(139, 92, 246);
+  outline-offset: 2px;
+}
+
+/* Light Theme Position Variants */
+html.light .themeToggle.dark .slider {
+  transform: translateX(1.5rem);
+  background: linear-gradient(135deg, rgb(96, 165, 250), rgb(59, 130, 246));
+}
+
+html.light .themeToggle.light .slider {
+  transform: translateX(0);
+  background: linear-gradient(135deg, rgb(167, 139, 250), rgb(139, 92, 246));
+}

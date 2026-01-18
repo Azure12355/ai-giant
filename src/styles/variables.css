@@ -228,3 +228,112 @@ html.light ::-webkit-scrollbar-thumb:hover {
 .animate-shimmer {
   animation: shimmer 2s linear infinite;
 }
+
+/* ========================================
+   LIGHT THEME STYLES - 亮色主题系统
+   设计理念：纯白背景 + 蓝紫色光晕渐变
+   ======================================== */
+
+/* Light Mode Background - 纯白背景 + 蓝紫色光晕 */
+html.light body {
+  background-color: rgb(255, 255, 255);
+  background-image:
+    radial-gradient(
+      ellipse 80% 50% at 20% 50%,
+      rgba(167, 139, 250, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 60% 40% at 80% 80%,
+      rgba(139, 92, 246, 0.06) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 50% 30% at 50% 20%,
+      rgba(96, 165, 250, 0.05) 0%,
+      transparent 50%
+    );
+}
+
+/* Light Mode Scrollbar - 亮色滚动条 */
+html.light ::-webkit-scrollbar-track {
+  background: rgb(241, 245, 249);
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgb(139, 92, 246), rgb(96, 165, 250));
+  border: 1px solid rgb(167, 139, 250);
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgb(124, 58, 237), rgb(59, 130, 246));
+}
+
+/* Light Mode Glass - 亮色玻璃态 */
+html.light .glass {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(139, 92, 246, 0.1);
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.05);
+}
+
+html.light .glass-gold {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.03),
+    rgba(96, 165, 250, 0.03)
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  box-shadow:
+    0 4px 16px rgba(139, 92, 246, 0.08),
+    inset 0 0 32px rgba(167, 139, 250, 0.05);
+}
+
+html.light .glass-card:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.06),
+    rgba(96, 165, 250, 0.06)
+  );
+  border-color: rgba(139, 92, 246, 0.3);
+  transform: translateY(-4px);
+  box-shadow:
+    0 8px 24px rgba(139, 92, 246, 0.12),
+    0 16px 48px rgba(96, 165, 250, 0.08);
+}
+
+/* Light Mode Text Gradient - 亮色渐变文字 */
+html.light .text-gradient {
+  background: linear-gradient(
+    to right,
+    rgb(139, 92, 246),
+    rgb(124, 58, 237),
+    rgb(96, 165, 250)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Light Mode Stars Background - 亮色星空背景 */
+html.light .bg-stars {
+  background-image:
+    radial-gradient(1.5px 1.5px at 20px 30px, rgb(167, 139, 250), transparent),
+    radial-gradient(1.5px 1.5px at 40px 70px, rgb(139, 92, 246), transparent),
+    radial-gradient(1.5px 1.5px at 50px 160px, rgb(96, 165, 250), transparent),
+    radial-gradient(1.5px 1.5px at 90px 40px, rgb(167, 139, 250), transparent),
+    radial-gradient(1.5px 1.5px at 130px 80px, rgb(124, 58, 237), transparent);
+  opacity: 0.4;
+}
+
+/* Light Mode Border Gradient - 亮色渐变边框 */
+html.light .border-gradient {
+  border-image: linear-gradient(
+    to right,
+    rgba(139, 92, 246, 0.2),
+    rgba(139, 92, 246, 0.5),
+    rgba(96, 165, 250, 0.5),
+    rgba(96, 165, 250, 0.2)
+  ) 1;
+}
