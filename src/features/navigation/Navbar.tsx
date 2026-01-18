@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { NAV_ITEMS } from '@/lib/constants';
-import { ThemeToggle } from '.';
 import styles from '@/styles/features/Navbar.module.css';
 
 const Navbar: React.FC = () => {
@@ -43,7 +42,6 @@ const Navbar: React.FC = () => {
                   {item.label}
                 </a>
               ))}
-              <ThemeToggle />
               <a href="#join" className={styles.ctaButton}>
                 立即咨询
               </a>
@@ -76,10 +74,6 @@ const Navbar: React.FC = () => {
                 {item.label}
               </a>
             ))}
-            <div className={styles.mobileThemeSection}>
-              <span className={styles.mobileThemeLabel}>主题切换</span>
-              <ThemeToggle />
-            </div>
           </div>
         </div>
       )}

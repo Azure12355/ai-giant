@@ -92,7 +92,7 @@ export const FOUNDER: TeamMember = {
   name: "七天 (王琪)",
   role: "创始人",
   description: "杭州智巨人人工智能科技有限公司创始人。前淘宝大学达人学院院长，薇娅、李佳琦启蒙导师。中国AI百强年会-AI创业领袖人物，中韩首尔峰会中方嘉宾，工信部尚工行动AIGC证书电商技能研发总负责，创业黑马AI加速导师。",
-  tags: ["AI创业领袖", "淘宝大学达人学院院长", "薇娅李佳琦启蒙导师", "工信部AIGC总负责"],
+  tags: ["AI创业领袖", "淘宝大学达人学院院长", "薇娅李佳琦启蒙导师", "工信部文化发展中心尚工行动AIGC电商技能证书总负责"],
   avatarUrl: "/images/team/founder/wq-qt.png"
 };
 

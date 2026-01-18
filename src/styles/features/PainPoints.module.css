@@ -351,141 +351,16 @@
    ======================================== */
 
 /* Section Background - White with subtle blue-purple radial gradients */
-html.light .section {
-  background-color: #ffffff;
-}
-
-html.light .backgroundBlob {
-  opacity: 0.6;
-}
-
-html.light .blobTop {
-  background: radial-gradient(circle at center, rgba(139, 92, 246, 0.15), rgba(59, 130, 246, 0.1));
-}
-
-html.light .blobBottom {
-  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.12), rgba(139, 92, 246, 0.08));
-}
-
 /* Header Text - Dark colors for readability */
-html.light .title {
-  color: rgb(15, 23, 42);
-}
-
-html.light .subtitle {
-  color: rgb(139, 92, 246);
-}
-
-html.light .description {
-  color: rgb(51, 65, 85);
-}
-
 /* Cards - White background with purple-blue borders */
-html.light .card {
-  background-color: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(139, 92, 246, 0.2);
-  box-shadow: 0 4px 6px rgba(139, 92, 246, 0.05),
-              0 1px 3px rgba(59, 130, 246, 0.05);
-}
-
-html.light .card:hover {
-  border-color: rgba(139, 92, 246, 0.4);
-  box-shadow: 0 10px 15px rgba(139, 92, 246, 0.1),
-              0 4px 6px rgba(59, 130, 246, 0.08);
-}
-
 /* Icon Boxes - White background with purple-blue borders */
-html.light .iconBox {
-  background-color: #ffffff;
-  border: 1px solid rgba(139, 92, 246, 0.2);
-}
-
-html.light .card:hover .iconBox {
-  background-color: rgba(139, 92, 246, 0.1);
-  border-color: rgba(139, 92, 246, 0.35);
-}
-
 /* Icons - Purple-blue colors */
-html.light .icon {
-  color: rgb(139, 92, 246);
-}
-
-html.light .card:hover .icon {
-  color: rgb(59, 130, 246);
-}
-
 /* Card Text - Dark colors for readability */
-html.light .cardTitle {
-  color: rgb(15, 23, 42);
-}
-
-html.light .cardDescription {
-  color: rgb(51, 65, 85);
-}
-
 /* Opportunity Gap Section - Light theme with purple-blue gradient border */
-html.light .opportunityGap {
-  background: linear-gradient(to right, rgba(139, 92, 246, 0.25), rgba(59, 130, 246, 0.25));
-}
-
-html.light .opportunityGapContent {
-  background-color: #ffffff;
-  border: 1px solid rgba(139, 92, 246, 0.15);
-}
-
 /* Opportunity Labels - Dark slate colors */
-html.light .opportunityLabel {
-  color: rgb(51, 65, 85);
-}
-
 /* Opportunity Values - Blue and dark colors */
-html.light .opportunityValueBlue {
-  color: rgb(59, 130, 246);
-}
-
-html.light .opportunityValueWhite {
-  color: rgb(15, 23, 42);
-}
-
 /* Opportunity Subtext - Light blue and slate colors */
-html.light .opportunitySubtextBlue {
-  color: rgb(59, 130, 246);
-}
-
-html.light .opportunitySubtextSlate {
-  color: rgb(71, 85, 105);
-}
-
 /* Opportunity Note - Medium slate */
-html.light .opportunityNote {
-  color: rgb(100, 116, 139);
-}
-
 /* Connector Badge - Blue with purple border */
-html.light .connectorBadge {
-  background: linear-gradient(135deg, rgb(59, 130, 246), rgb(139, 92, 246));
-  border: 1px solid rgba(139, 92, 246, 0.3);
-  box-shadow: 0 10px 15px rgba(139, 92, 246, 0.2);
-}
-
 /* Connector Lines - Blue-purple gradient */
-html.light .connectorLineBase {
-  background-color: rgba(139, 92, 246, 0.2);
-}
-
-html.light .connectorLineAnimated {
-  background: linear-gradient(to right, transparent, rgb(139, 92, 246), transparent);
-}
-
 /* Opportunity Footer - Dark text with blue-purple highlight */
-html.light .opportunityFooter {
-  border-top: 1px solid rgba(139, 92, 246, 0.15);
-}
-
-html.light .opportunityFooterText {
-  color: rgb(51, 65, 85);
-}
-
-html.light .opportunityHighlight {
-  background-image: linear-gradient(to right, rgb(139, 92, 246), rgb(59, 130, 246));
-}
