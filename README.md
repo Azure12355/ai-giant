@@ -1,4 +1,4 @@
-# 智巨人 AI Business Platform
+<h1 align="center">智巨人 AI Business Platform</h1>
 
 <div align="center">
 
@@ -10,8 +10,7 @@
 [![Three.js](https://img.shields.io/badge/Three.js-0.182.0-white?style=for-the-badge&logo=three.js)](https://threejs.org/)
 
 </div>
-
----
+<img src="./docs/home.png" alt="home" />
 
 ## 目录
 
